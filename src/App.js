@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { Quiz, Result } from 'pages';
+import { globalTheme } from './styles/global';
+import userDefinedThemes from './styles/themeModes';
 
-function App() {
+const App = ({ themeMode }) => {
+  useEffect(() => {
+    console.log(themeMode)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <ThemeProvider theme={globalTheme}>
+          <Route exact path="/">
+            <Quiz />
+          </Route>
+          <ThemeProvider theme={userDefinedThemes[themeMode]}>
+            <Route exact path="/result">
+              <Result />
+            </Route>
+          </ThemeProvider>
+        </ThemeProvider>
+      </Switch>
+    </BrowserRouter>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => ({
+  themeMode: state.themeMode
+})
+
+export default connect(mapStateToProps, null)(App);

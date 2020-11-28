@@ -1,0 +1,7 @@
+export const THEME = {
+  SET_THEME_MODE: 'SET_THEME_MODE'
+}
+
+export const QUIZRESULT = {
+  SET_QUIZ_RESULT: 'SET_QUIZ_RESULT'
+}
