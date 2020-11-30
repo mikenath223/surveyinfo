@@ -1,6 +1,6 @@
 const intitalstates = {
   resultReducer: {},
-  themeReducer: 'LIGHT_GRID_LARGE_TEXT'
+  themeReducer: 'DARK_GRID_LARGE_TEXT'
 }
 
 export default intitalstates

@@ -1,12 +1,29 @@
 const lightMode = {
-  tealLight: '#34d1d1',
-  lightCyan: 'lightCyan',
-  lightTeal: '#e5f5f4',
+  mainText: '#fff',
+  subText: '#000',
+  introText: '#000',
+  headBg: '#826eef',
+  bottomDropBg: '#EBEBED',
+  dashboardBg: '#fff',
+  asideBg: 'silver',
+  darkGrey: '#EBEBED',
+  lightGrey: '#999CE0',
+  resultHead: '#E6E6E6',
+  resultBg: '#C5C5C5'
 }
 
 const darkMode = {
-  grey: '#494949',
-  tealDark: '#0c3c3d',
+  mainText: '#fff',
+  subText: '#E5E5E5',
+  introText: '#fff',
+  headBg: '#140017',
+  bottomDropBg: '#000',
+  dashboardBg: '#000',
+  asideBg: '#1A1A1A',
+  darkGrey: '#EBEBED',
+  lightGrey: '#999CE0',
+  resultHead: '#1A1A1A',
+  resultBg: '#121212'  
 }
 
 const lightGrid = {
@@ -29,38 +46,54 @@ const darkList = {
   colors: { ...darkMode }
 }
 
+const largeText = {
+  textSizes: {
+    mainText: '40px',
+    subText: '22px',
+    introText: '20px'
+  }
+}
+
+const regularText = {
+  textSizes: {
+    mainText: '18px',
+    subText: '16px',
+    introText: '14px'
+  }
+}
+
 const userDefinedThemes = {
   LIGHT_GRID_LARGE_TEXT: {
     ...lightGrid,
-    textSize: '18px'
+    ...largeText
   },
-  LIGHT_GRID_SMALL_TEXT: {
+  LIGHT_GRID_REGULAR_TEXT: {
     ...lightGrid,
-    textSize: '12px'
+    ...regularText
   },
   LIGHT_LIST_LARGE_TEXT: {
     ...lightList,
-    textSize: '18px'
+    ...largeText
   },
-  LIGHT_LIST_SMALL_TEXT: {
+  LIGHT_LIST_REGULAR_TEXT: {
     ...lightList,
-    textSize: '12px'
+    ...regularText
   },
   DARK_GRID_LARGE_TEXT: {
     ...darkGrid,
-    textSize: '18px'
+    ...largeText
   },
-  DARK_GRID_SMALL_TEXT: {
+  DARK_GRID_REGULAR_TEXT: {
     ...darkGrid,
-    textSize: '12px'
+    ...regularText
   },
   DARK_LIST_LARGE_TEXT: {
     ...darkList,
-    textSize: '18px'
+    ...largeText
   },
-  DARK_LIST_SMALL_TEXT: {
+  DARK_LIST_REGULAR_TEXT: {
     ...darkList,
-    textSize: '12px'
+    ...regularText
   },
 }
 

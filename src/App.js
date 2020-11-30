@@ -10,16 +10,16 @@ const App = ({ themeMode }) => {
   return (
     <BrowserRouter>
       <Switch>
-        <ThemeProvider theme={globalTheme}>
-          <Route exact path="/">
+        <Route exact path="/">
+          <ThemeProvider theme={globalTheme}>
             <Quiz />
-          </Route>
-          <ThemeProvider theme={userDefinedThemes[themeMode]}>
-            <Route exact path="/result">
-              <Result />
-            </Route>
           </ThemeProvider>
-        </ThemeProvider>
+        </Route>
+        <Route exact path="/result">
+          <ThemeProvider theme={userDefinedThemes[themeMode]}>
+            <Result />
+          </ThemeProvider>
+        </Route>
       </Switch>
     </BrowserRouter>
   );

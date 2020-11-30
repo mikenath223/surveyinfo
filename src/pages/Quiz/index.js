@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { withTheme } from 'styled-components';
 import {
   Hero,
   HeroText,
@@ -8,12 +9,26 @@ import {
   DashBoard,
   InnerSection,
   BoardAside,
-  FormSection
+  FormSection,
+  BackDrop
 } from './Quiz.styled';
-import { setThemeMode, setQuizMode } from 'store/actions';
+import { setThemeMode, saveQuizResult } from 'store/actions';
 import Form from 'components/Form';
 
-const Quiz = ({setThemeMode}) => {
+const Quiz = ({ theme, setThemeMode, saveQuizResult }) => {
+  const history = useHistory();
+
+  React.useEffect(() => {
+    console.log('THEME', theme)
+  }, [])
+
+  const handleSubmit = values => {
+    const { message, date, layout, color, text } = values;
+    saveQuizResult({ message, date });
+    const theme = `${color}_${layout}_${text}_TEXT`;
+    setThemeMode(theme);
+    history.push('/result');
+  }
 
   return <main>
     <Hero>
@@ -22,20 +37,18 @@ const Quiz = ({setThemeMode}) => {
     </Hero>
     <DashBoard>
       <InnerSection>
-        <BoardAside>
-        </BoardAside>
+        <BoardAside />
         <FormSection>
-          <Form />
+          <Form handleSubmit={handleSubmit} />
         </FormSection>
       </InnerSection>
     </DashBoard>
-    <Link to="/result">Result</Link>
   </main>
 }
 
 const mapDispatchToProps = {
-  saveResult,
+  saveQuizResult,
   setThemeMode
 }
 
-export default connect(null, mapDispatchToProps)(Quiz)
+export default withTheme(connect(null, mapDispatchToProps)(Quiz))

@@ -9,12 +9,13 @@ export const breakpoints = {
 
 export const globalTheme = {
   colors: {
-    purpleDark: '#2B13AF',
+    headBg: '#2B13AF',
+    dashboardBg: '#fff',
+    asideBg: 'silver',
     grey: '#494949',
-    lightGrey: '#999CE0',
+    subText: '#999CE0',
     amberYellow: '#F9B931',
-    darkGrey: '#EBEBED',
-    white: '#fff',
+    mainText: '#fff',
   },
   textSizes: {
     small: '12px',

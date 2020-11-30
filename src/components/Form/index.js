@@ -12,13 +12,13 @@ const schema = Yup.object({
   text: Yup.string()
 });
 
-export default function FormExample() {
+export default function SurveyForm({handleSubmit}) {
   return (
     <Formik
       validationSchema={schema}
-      onSubmit={(vals) => console.log(vals)}
+      onSubmit={(vals) => handleSubmit(vals)}
       initialValues={{
-        text: "REGULAR", color: "LIGHT", layout: "ROWS",
+        text: "REGULAR", color: "LIGHT", layout: "LIST",
         message: '', date: ''
       }}
     >
@@ -42,7 +42,7 @@ export default function FormExample() {
                   name="message"
                   className="mh-100"
                   rows="7"
-                  spellCheck={true}
+                  spellCheck="true"
                   value={values.message}
                   onBlur={handleBlur}
                   onFocus={handleBlur}
@@ -73,7 +73,7 @@ export default function FormExample() {
 
             <Form.Row className="pb-4 px-0 mx-0 mt-4">
               <Form.Label as={Col} className="col-12 pl-0">Customize your theme</Form.Label>
-              <Row className="col-12 mx-0">
+              <Row className="col-12 mx-0 border border-1 mt-1 p-2">
                 <Form.Group as={Col} md="4">
                   <Form.Label className="font-weight-bold">Layout</Form.Label>
                   <InputGroup>
@@ -82,10 +82,10 @@ export default function FormExample() {
                         type="radio"
                         id="layout"
                         name="layout"
-                        label="Rows"
+                        label="List"
                         onChange={handleChange}
                         defaultChecked
-                        value="ROWS"
+                        value="LIST"
                       />
                       <Form.Check
                         type="radio"

@@ -1,9 +1,14 @@
-import styled from 'styled-components';
-import theme from 'styled-theming';
-import buttonBackgound from 'styles/global';
+import React from 'react'
+import { BaseButton } from './Button.styled';
 
-const backgroundColor = theme('mode', buttonBackgound);
+const Button = (props) => {
+  const { onClick, disabled = false, children, ...otherProps } = props;
 
-export const Button = styled.button`
-  background-color: ${backgroundColor};
-`;
+  return (
+    <BaseButton onClick={onClick} disabled={disabled} {...otherProps}>
+      {children}
+    </BaseButton>
+  );
+};
+
+export default Button;
