@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux'
@@ -7,10 +7,6 @@ import { globalTheme } from './styles/global';
 import userDefinedThemes from './styles/themeModes';
 
 const App = ({ themeMode }) => {
-  useEffect(() => {
-    console.log(themeMode)
-  }, [])
-
   return (
     <BrowserRouter>
       <Switch>

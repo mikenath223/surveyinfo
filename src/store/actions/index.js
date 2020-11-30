@@ -5,7 +5,7 @@ export const setThemeMode = (themeMode) => ({
     themeMode
 })
 
-export const setQUizResult = (result) => ({
+export const setQuizResult = (result) => ({
   type: QUIZRESULT.SET_QUIZ_RESULT,
     result
 })

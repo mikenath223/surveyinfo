@@ -5,7 +5,6 @@ const lightMode = {
 }
 
 const darkMode = {
-  lightGrey: '#6c6c6c',
   grey: '#494949',
   tealDark: '#0c3c3d',
 }

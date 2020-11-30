@@ -9,7 +9,11 @@ export const breakpoints = {
 
 export const globalTheme = {
   colors: {
+    purpleDark: '#2B13AF',
     grey: '#494949',
+    lightGrey: '#999CE0',
+    amberYellow: '#F9B931',
+    darkGrey: '#EBEBED',
     white: '#fff',
   },
   textSizes: {
@@ -17,13 +21,14 @@ export const globalTheme = {
     regular: '14px',
     medium: '16px',
     large: '18px',
+    xlarge: '30px'
   },
   fonts: {
     montserrat: 'Montserrat',
     sansSerif: 'sans-serif',
     helvetica: 'Helvetica Neue',
   },
-  fontWeight: {
+  fontWeights: {
     regular: 400,
     medium: 500,
     semiBold: 600,
@@ -43,6 +48,8 @@ const globalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    min-height: 100vh;
+    background-color: #EBEBED;
     font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
