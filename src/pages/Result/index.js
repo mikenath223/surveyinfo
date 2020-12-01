@@ -17,9 +17,9 @@ import Footer from 'components/Footer';
 const Result = ({ quizResult: { message, date } }) => {
   const history = useHistory();
 
-  // useEffect(() => {
-  //   if (!message || !date) history.push('/')
-  // }, [message, date])
+  useEffect(() => {
+    if (!message || !date) history.push('/')
+  }, [message, date])
 
   return <Wrapper>
     <Hero>
