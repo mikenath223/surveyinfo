@@ -5,12 +5,19 @@ import { globalTheme } from 'styles/global';
 import userDefTheme from 'styles/themeModes';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router';
+import renderer from 'react-test-renderer';
 import store from 'store'
+import userDefinedThemes from 'styles/themeModes';
 
 export const withThemeProvider = (component) =>
   render(<ThemeProvider theme={globalTheme}>
     {component}
   </ThemeProvider>)
+
+export const withResultThemeProvider = (component, themeMode) => 
+    renderer.create(<ThemeProvider theme={userDefinedThemes[themeMode]}>
+      {component}
+    </ThemeProvider>)
 
 export const withReduxThemeProvider = (component) =>
   render(<Provider store={store}>

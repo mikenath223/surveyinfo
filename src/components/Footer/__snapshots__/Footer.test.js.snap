@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should match snapshot 1`] = `
+<div>
+  <div
+    class="iIKvBE row"
+  >
+    <div
+      class="col-sm-12"
+    >
+      <hr
+        class="hOUiTo"
+      />
+    </div>
+    <div
+      class="col-sm-12"
+    >
+      <div
+        class="iWfnjv"
+      >
+        © 2020 CheabanTest. All rights reserved.
+      </div>
+    </div>
+  </div>
+</div>
+`;

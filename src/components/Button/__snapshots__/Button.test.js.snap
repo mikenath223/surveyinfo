@@ -4,7 +4,7 @@ exports[`Button should match snapshot 1`] = `
 .c0.source {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: green;
+  color: #fff;
 }
 
 .c0.link {

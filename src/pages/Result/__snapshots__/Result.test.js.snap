@@ -2,6 +2,11 @@
 
 exports[`Result page should match snapshot 1`] = `
 .c0 {
+  min-height: 100vh;
+  background-color: #EBEBED;
+}
+
+.c1 {
   background: url(/assets/survey.png) center no-repeat;
   background-color: #826eef;
   background-position: 90%;
@@ -10,7 +15,7 @@ exports[`Result page should match snapshot 1`] = `
   min-height: 300px;
 }
 
-.c1 {
+.c2 {
   font-size: 40px;
   color: #fff;
   font-family: Montserrat;
@@ -20,20 +25,20 @@ exports[`Result page should match snapshot 1`] = `
   margin: 0;
 }
 
-.c2 {
+.c3 {
   font-size: 22px;
   color: #000;
   font-style: italic;
 }
 
-.c3 {
+.c4 {
   margin: -90px auto 100px auto;
   min-height: 500px;
   max-width: 1200px;
   padding: 20px;
 }
 
-.c4 {
+.c5 {
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -44,7 +49,7 @@ exports[`Result page should match snapshot 1`] = `
   border-radius: 20px;
 }
 
-.c5 {
+.c6 {
   background: url(/assets/mailbox.png) center no-repeat;
   background-color: silver;
   background-size: 190px;
@@ -53,21 +58,21 @@ exports[`Result page should match snapshot 1`] = `
   border-radius: 20px 0;
 }
 
-.c7 {
-  font-size: 40px;
+.c8 {
+  font-size: 25px;
   color: #000;
-  margin: 20px 0;
+  margin: 50px 0;
   border-radius: 20px;
   text-align: center;
 }
 
-.c6 {
+.c7 {
   background-color: #fff;
   width: 100%;
   border-radius: 20px;
 }
 
-.c8 {
+.c9 {
   display: grid;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
@@ -76,145 +81,194 @@ exports[`Result page should match snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 48% 48%;
   gap: 30px;
   margin: 10px 30px;
 }
 
-.c10 {
-  text-align: center;
-  padding: 5px 0;
+.c11 {
+  font-size: 25px;
   color: #000;
   background-color: #E6E6E6;
+  text-align: center;
   border-radius: 10px;
+  padding: 5px 0;
+  overflow: hidden;
 }
 
-.c10.result {
-  white-space: wrap;
+.c11.result {
   text-align: unset;
-  padding-left: 10px;
+  padding: 10px;
   background-color: unset;
 }
 
-.c9 {
-  font-size: 40px;
+.c10 {
+  font-size: 25px;
   color: #fff;
   background-color: #C5C5C5;
   border-radius: 10px;
   min-height: 300px;
 }
 
-.c11 {
-  font-size: 40px;
+.c12 {
+  font-size: 25px;
   color: #fff;
   background-color: #C5C5C5;
   border-radius: 10px;
   max-height: 150px;
 }
 
-.c12.source {
+.c13.source {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: green;
+  color: #fff;
 }
 
-.c12.link {
+.c13.link {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c14 {
+  width: 80%;
+  margin: auto;
+}
+
+.c16 {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 15px;
+  color: #000;
+}
+
+.c15 {
+  border-top: 1px solid grey;
+  margin-top: 4rem;
+  margin-bottom: 0;
+  opacity: 0.3;
 }
 
 @media (max-width:576px) {
-  .c0 {
+  .c1 {
     background-size: 150px;
     padding: 30px 0 0 30px;
   }
 }
 
 @media (max-width:768px) {
-  .c1 {
+  .c2 {
     font-size: 20px;
     padding-top: 7.5rem;
   }
 }
 
 @media (max-width:576px) {
-  .c2 {
+  .c3 {
     font-size: 14px;
   }
 }
 
 @media (max-width:768px) {
-  .c5 {
+  .c6 {
     display: none;
   }
 }
 
 @media (max-width:768px) {
-  .c7 {
-    font-size: 20px;
+  .c8 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:576px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:576px) {
+  .c11 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:768px) {
+  .c10 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:768px) {
+  .c12 {
+    font-size: 14px;
   }
 }
 
 <div>
-  <main>
+  <main
+    class="c0"
+  >
     <section
-      class="c0"
+      class="c1"
     >
       <h1
-        class="c1"
+        class="c2"
       >
         Survey Grill
       </h1>
       <h4
-        class="c2"
+        class="c3"
       >
         We invite you to come take our survey
       </h4>
     </section>
     <section
-      class="c3"
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         />
         <div
-          class="c6"
+          class="c7"
         >
           <h2
-            class="c7"
+            class="c8"
           >
             Your Result
           </h2>
           <div
-            class="c8"
+            class="c9"
           >
-            <p
-              class="c9"
+            <div
+              class="c10"
             >
               <h3
-                class="c10"
+                class="c11"
               >
                 Message
               </h3>
               <p
-                class="c10 result"
+                class="c11 result"
               />
-            </p>
-            <p
-              class="c11"
+            </div>
+            <div
+              class="c12"
             >
               <h3
-                class="c10"
+                class="c11"
               >
                 Date
               </h3>
               <p
-                class="c10 result"
+                class="c11 result"
               />
-            </p>
+            </div>
           </div>
           <div
             class="mx-2 my-5 row"
@@ -223,17 +277,17 @@ exports[`Result page should match snapshot 1`] = `
               class="text-center my-3 col-md-6"
             >
               <a
-                class="c12 bg-primary p-2 rounded text-white link"
+                class="c13 bg-primary p-2 rounded text-white link"
                 href="/"
               >
                 Retake Survey
               </a>
             </div>
             <div
-              class="text-center my-2 col-md-6"
+              class="text-center pt-3 col-md-6"
             >
               <a
-                class="c12 source bg-warning  p-2 rounded text-success font-weight-bold"
+                class="c13 source bg-danger  p-2 rounded font-weight-bold"
                 href="https://github.com/mikenath223/surveyinfo"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -245,6 +299,26 @@ exports[`Result page should match snapshot 1`] = `
         </div>
       </div>
     </section>
+    <div
+      class="c14 row"
+    >
+      <div
+        class="col-sm-12"
+      >
+        <hr
+          class="c15"
+        />
+      </div>
+      <div
+        class="col-sm-12"
+      >
+        <div
+          class="c16"
+        >
+          © 2020 CheabanTest. All rights reserved.
+        </div>
+      </div>
+    </div>
   </main>
 </div>
 `;
