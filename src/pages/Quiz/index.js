@@ -10,11 +10,13 @@ import {
   InnerSection,
   BoardAside,
   FormSection,
+  Wrapper,
 } from './Quiz.styled';
 import { setThemeMode, saveQuizResult } from 'store/actions';
 import Form from 'components/Form';
+import Footer from 'components/Footer';
 
-const Quiz = ({ theme, setThemeMode, saveQuizResult }) => {
+const Quiz = ({ setThemeMode, saveQuizResult }) => {
   const history = useHistory();
 
   const handleSubmit = values => {
@@ -25,7 +27,7 @@ const Quiz = ({ theme, setThemeMode, saveQuizResult }) => {
     history.push('/result');
   }
 
-  return <main>
+  return <Wrapper>
     <Hero>
       <HeroText>Survey Grill</HeroText>
       <HeroSubText>We invite you to come take our survey</HeroSubText>
@@ -38,7 +40,8 @@ const Quiz = ({ theme, setThemeMode, saveQuizResult }) => {
         </FormSection>
       </InnerSection>
     </DashBoard>
-  </main>
+    <Footer />
+  </Wrapper>
 }
 
 const mapDispatchToProps = {

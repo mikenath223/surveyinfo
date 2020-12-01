@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { BaseButton } from './Button.styled';
 
 const Button = (props) => {
@@ -9,6 +10,12 @@ const Button = (props) => {
       {children}
     </BaseButton>
   );
+};
+
+Button.propTypes = {
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
 export default Button;

@@ -161,6 +161,6 @@ export default function SurveyForm({ handleSubmit }) {
   );
 }
 
-SurveyForm.proptypes = {
+SurveyForm.propTypes = {
   handleSubmit: PropTypes.func
 }

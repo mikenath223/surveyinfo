@@ -16,6 +16,7 @@ export const globalTheme = {
     subText: '#999CE0',
     amberYellow: '#F9B931',
     mainText: '#fff',
+    bottomDropBg: '#EBEBED'
   },
   textSizes: {
     small: '12px',
@@ -50,7 +51,6 @@ const globalStyle = createGlobalStyle`
   body {
     margin: 0;
     min-height: 100vh;
-    background-color: #EBEBED;
     font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

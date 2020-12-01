@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { breakpoints } from 'styles/global';
 
+export const Wrapper = styled.main`
+  min-height: 100vh;
+  background-color: ${({ theme }) => theme.colors.bottomDropBg};
+`
+
 export const Hero = styled.section`
   background: url(/assets/survey.png) center no-repeat;
   background-color: ${({ theme }) => theme.colors.headBg};

@@ -17,7 +17,7 @@ const darkMode = {
   subText: '#E5E5E5',
   introText: '#fff',
   headBg: '#140017',
-  bottomDropBg: '#000',
+  bottomDropBg: '#080808',
   dashboardBg: '#000',
   asideBg: '#1A1A1A',
   darkGrey: '#EBEBED',
@@ -50,15 +50,15 @@ const largeText = {
   textSizes: {
     mainText: '40px',
     subText: '22px',
-    introText: '20px'
+    introText: '25px'
   }
 }
 
 const regularText = {
   textSizes: {
-    mainText: '18px',
+    mainText: '30px',
     subText: '16px',
-    introText: '14px'
+    introText: '16px'
   }
 }
 

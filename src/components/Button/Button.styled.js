@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 export const BaseButton = styled(Button)`
   &.source {
     text-decoration: none;
-    color: green;
+    color: #fff;
   }
   &.link {
     text-decoration: none;

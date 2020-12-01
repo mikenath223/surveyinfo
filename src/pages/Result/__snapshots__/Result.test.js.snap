@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result page should match snapshot 1`] = `
+.c0 {
+  background: url(/assets/survey.png) center no-repeat;
+  background-color: #826eef;
+  background-position: 90%;
+  background-size: 300px;
+  padding: 30px 0 0 100px;
+  min-height: 300px;
+}
+
+.c1 {
+  font-size: 40px;
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 700;
+  padding-top: 4.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.c2 {
+  font-size: 22px;
+  color: #000;
+  font-style: italic;
+}
+
+.c3 {
+  margin: -90px auto 100px auto;
+  min-height: 500px;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.c4 {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  min-height: 500px;
+  border-radius: 20px;
+}
+
+.c5 {
+  background: url(/assets/mailbox.png) center no-repeat;
+  background-color: silver;
+  background-size: 190px;
+  width: 500px;
+  min-height: 500px;
+  border-radius: 20px 0;
+}
+
+.c7 {
+  font-size: 40px;
+  color: #000;
+  margin: 20px 0;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.c6 {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.c8 {
+  display: grid;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 10px 30px;
+}
+
+.c10 {
+  text-align: center;
+  padding: 5px 0;
+  color: #000;
+  background-color: #E6E6E6;
+  border-radius: 10px;
+}
+
+.c10.result {
+  white-space: wrap;
+  text-align: unset;
+  padding-left: 10px;
+  background-color: unset;
+}
+
+.c9 {
+  font-size: 40px;
+  color: #fff;
+  background-color: #C5C5C5;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.c11 {
+  font-size: 40px;
+  color: #fff;
+  background-color: #C5C5C5;
+  border-radius: 10px;
+  max-height: 150px;
+}
+
+.c12.source {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: green;
+}
+
+.c12.link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (max-width:576px) {
+  .c0 {
+    background-size: 150px;
+    padding: 30px 0 0 30px;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    font-size: 20px;
+    padding-top: 7.5rem;
+  }
+}
+
+@media (max-width:576px) {
+  .c2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:768px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .c7 {
+    font-size: 20px;
+  }
+}
+
+<div>
+  <main>
+    <section
+      class="c0"
+    >
+      <h1
+        class="c1"
+      >
+        Survey Grill
+      </h1>
+      <h4
+        class="c2"
+      >
+        We invite you to come take our survey
+      </h4>
+    </section>
+    <section
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+        />
+        <div
+          class="c6"
+        >
+          <h2
+            class="c7"
+          >
+            Your Result
+          </h2>
+          <div
+            class="c8"
+          >
+            <p
+              class="c9"
+            >
+              <h3
+                class="c10"
+              >
+                Message
+              </h3>
+              <p
+                class="c10 result"
+              />
+            </p>
+            <p
+              class="c11"
+            >
+              <h3
+                class="c10"
+              >
+                Date
+              </h3>
+              <p
+                class="c10 result"
+              />
+            </p>
+          </div>
+          <div
+            class="mx-2 my-5 row"
+          >
+            <div
+              class="text-center my-3 col-md-6"
+            >
+              <a
+                class="c12 bg-primary p-2 rounded text-white link"
+                href="/"
+              >
+                Retake Survey
+              </a>
+            </div>
+            <div
+              class="text-center my-2 col-md-6"
+            >
+              <a
+                class="c12 source bg-warning  p-2 rounded text-success font-weight-bold"
+                href="https://github.com/mikenath223/surveyinfo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+`;

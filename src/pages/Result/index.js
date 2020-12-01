@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {
   Hero, HeroText, HeroSubText, DashBoard,
-  InnerSection, BoardAside
+  InnerSection, BoardAside, Wrapper
 } from 'pages/Quiz/Quiz.styled';
 import {
   ResultHeadText, MainBoard, Text,
@@ -12,15 +12,16 @@ import {
 } from './Result.styled';
 import ButtonLink from 'components/Button';
 import { Col } from 'react-bootstrap';
+import Footer from 'components/Footer';
 
 const Result = ({ quizResult: { message, date } }) => {
   const history = useHistory();
 
-  useEffect(() => {
-    if (!Object.keys(quizResult).length) history.push('/')
-  }, [])
+  // useEffect(() => {
+  //   if (!message || !date) history.push('/')
+  // }, [message, date])
 
-  return <main>
+  return <Wrapper>
     <Hero>
       <HeroText>Survey Grill</HeroText>
       <HeroSubText>We invite you to come take our survey</HeroSubText>
@@ -50,8 +51,8 @@ const Result = ({ quizResult: { message, date } }) => {
                 Retake Survey
               </ButtonLink>
             </Col>
-            <Col md={6} className="text-center my-2">
-              <ButtonLink as="a" className="source bg-warning  p-2 rounded text-success font-weight-bold" rel="noopener noreferrer" target="_blank" href="https://github.com/mikenath223/surveyinfo">
+            <Col md={6} className="text-center pt-3">
+              <ButtonLink as="a" className="source bg-danger  p-2 rounded font-weight-bold" rel="noopener noreferrer" target="_blank" href="https://github.com/mikenath223/surveyinfo">
                   Source Code
               </ButtonLink>
             </Col>
@@ -59,7 +60,8 @@ const Result = ({ quizResult: { message, date } }) => {
         </MainBoard>
       </InnerSection>
     </DashBoard>
-  </main>
+    <Footer/>
+  </Wrapper>
 }
 
 const mapStateToProps = ({ quizResult }) => ({
