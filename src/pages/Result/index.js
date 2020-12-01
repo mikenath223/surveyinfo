@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   Hero, HeroText, HeroSubText, DashBoard,
   InnerSection, BoardAside
@@ -10,14 +11,13 @@ import {
   ResultSection, Message, Date, BottomLinks
 } from './Result.styled';
 import ButtonLink from 'components/Button';
-import { Col, Card } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
-const Result = ({ quizResult: { message, date }, themeMode }) => {
+const Result = ({ quizResult: { message, date } }) => {
   const history = useHistory();
 
   useEffect(() => {
-    // if (!Object.keys(quizResult).length) history.push('/')
-    console.log('setThe', themeMode)
+    if (!Object.keys(quizResult).length) history.push('/')
   }, [])
 
   return <main>
@@ -45,16 +45,14 @@ const Result = ({ quizResult: { message, date }, themeMode }) => {
             </Date>
           </ResultSection>
           <BottomLinks className="mx-2 my-5">
-            <Col md={6} className="text-center my-2">
-              <ButtonLink>
-                <Link to="/">Retake Survey</Link>
+            <Col md={6} className="text-center my-3">
+              <ButtonLink as={Link} className="bg-primary p-2 rounded text-white link" to="/">
+                Retake Survey
               </ButtonLink>
             </Col>
             <Col md={6} className="text-center my-2">
-              <ButtonLink className="bg-warning">
-                <a className="source" rel="noopener noreferrer" target="_blank" href="https://github.com/mikenath223/surveyinfo">
+              <ButtonLink as="a" className="source bg-warning  p-2 rounded text-success font-weight-bold" rel="noopener noreferrer" target="_blank" href="https://github.com/mikenath223/surveyinfo">
                   Source Code
-                </a>
               </ButtonLink>
             </Col>
           </BottomLinks>
@@ -64,9 +62,15 @@ const Result = ({ quizResult: { message, date }, themeMode }) => {
   </main>
 }
 
-const mapStateToProps = ({ quizResult, themeMode }) => ({
+const mapStateToProps = ({ quizResult }) => ({
   quizResult,
-  themeMode
 })
+
+Result.propTypes = {
+  quizResult: PropTypes.shape({
+    message: PropTypes.string,
+    date: PropTypes.string
+  })
+}
 
 export default connect(mapStateToProps, null)(Result)

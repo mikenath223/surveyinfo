@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should match snapshot 1`] = `
+<div>
+  <form
+    class="ml-lg-5 m-4"
+    novalidate=""
+  >
+    <h2
+      class="sc-bdfBwQ ggakCv"
+    >
+      Take the survey
+    </h2>
+    <div
+      class="pb-4 mx-0 form-group row"
+    >
+      <label
+        class="form-label"
+        for="validationFormikMessage1"
+      >
+        Message
+      </label>
+      <div
+        class="input-group"
+      >
+        <textarea
+          class="mh-100 form-control"
+          data-testid="messageInput"
+          id="validationFormikMessage1"
+          name="message"
+          rows="7"
+          spellcheck="true"
+        />
+        <div
+          class="invalid-tooltip"
+          data-testid="messageError"
+        />
+        <div
+          class="valid-tooltip"
+        >
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div
+      class="pb-4 mx-0 form-group row"
+    >
+      <label
+        class="col-12 pl-0 form-label"
+        for="validationFormikDate2"
+      >
+        Date
+      </label>
+      <div
+        class="p-0 col-5 input-group"
+      >
+        <input
+          class="form-control"
+          id="validationFormikDate2"
+          name="date"
+          type="date"
+          value=""
+        />
+        <div
+          class="valid-tooltip"
+        >
+          Looks good!
+        </div>
+        <div
+          class="invalid-tooltip"
+        />
+      </div>
+    </div>
+    <div
+      class="pb-4 px-0 mx-0 mt-4 form-row"
+    >
+      <div
+        class="col-12 pl-0 form-label col"
+      >
+        Customize your theme
+      </div>
+      <div
+        class="col-12 mx-0 border border-1 mt-1 p-2 row"
+      >
+        <div
+          class="form-group col-md-4"
+        >
+          <label
+            class="font-weight-bold form-label"
+          >
+            Layout
+          </label>
+          <div
+            class="input-group"
+          >
+            <div
+              aria-labelledby="my-radio-group"
+              role="group"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  checked=""
+                  class="form-check-input"
+                  id="layout"
+                  name="layout"
+                  type="radio"
+                  value="LIST"
+                />
+                <label
+                  class="form-check-label"
+                  for="layout"
+                  title=""
+                >
+                  List
+                </label>
+              </div>
+              <div
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="layout"
+                  name="layout"
+                  type="radio"
+                  value="GRID"
+                />
+                <label
+                  class="form-check-label"
+                  for="layout"
+                  title=""
+                >
+                  Grid
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="form-group col-md-4"
+        >
+          <label
+            class="font-weight-bold form-label"
+          >
+            Color Mode
+          </label>
+          <div
+            class="input-group"
+          >
+            <div
+              aria-labelledby="my-radio-group"
+              role="group"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  checked=""
+                  class="form-check-input"
+                  id="color"
+                  name="color"
+                  type="radio"
+                  value="LIGHT"
+                />
+                <label
+                  class="form-check-label"
+                  for="color"
+                  title=""
+                >
+                  Light Mode
+                </label>
+              </div>
+              <div
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="color"
+                  name="color"
+                  type="radio"
+                  value="DARK"
+                />
+                <label
+                  class="form-check-label"
+                  for="color"
+                  title=""
+                >
+                  Dark Mode
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="form-group col-md-4"
+        >
+          <label
+            class="font-weight-bold form-label"
+          >
+            Text Size
+          </label>
+          <div
+            class="input-group"
+          >
+            <div
+              aria-labelledby="my-radio-group"
+              role="group"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  checked=""
+                  class="form-check-input"
+                  id="text"
+                  name="text"
+                  type="radio"
+                  value="REGULAR"
+                />
+                <label
+                  class="form-check-label"
+                  for="text"
+                  title=""
+                >
+                  Regular
+                </label>
+              </div>
+              <div
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="text"
+                  name="text"
+                  type="radio"
+                  value="LARGE"
+                />
+                <label
+                  class="form-check-label"
+                  for="text"
+                  title=""
+                >
+                  Large
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12 mx-0 my-5 row"
+    >
+      <button
+        class="mx-auto btn btn-primary"
+        type="submit"
+      >
+        Submit survey
+      </button>
+    </div>
+  </form>
+</div>
+`;

@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
     "formik": "^2.2.5",
+    "jest-styled-components": "^7.0.3",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
@@ -23,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coverage": "yarn test --maxWorkers 2 --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": [
@@ -46,7 +48,7 @@
   "jest": {
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.js",
-      "!<rootDir>/src/serviceWorker.js"
+      "!<rootDir>/src/reportWebVitals.js"
     ]
   }
 }

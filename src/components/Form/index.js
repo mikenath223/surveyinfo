@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik } from "formik";
-import { Form, InputGroup, Row, Col, Button } from 'react-bootstrap'
+import { Form, InputGroup, Row, Col, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import { SurveyIntro } from './Form.styled'
 import * as Yup from "yup";
 
@@ -12,7 +13,7 @@ const schema = Yup.object({
   text: Yup.string()
 });
 
-export default function SurveyForm({handleSubmit}) {
+export default function SurveyForm({ handleSubmit }) {
   return (
     <Formik
       validationSchema={schema}
@@ -42,6 +43,7 @@ export default function SurveyForm({handleSubmit}) {
                   name="message"
                   className="mh-100"
                   rows="7"
+                  data-testid="messageInput"
                   spellCheck="true"
                   value={values.message}
                   onBlur={handleBlur}
@@ -50,7 +52,7 @@ export default function SurveyForm({handleSubmit}) {
                   isValid={touched.message && !errors.message}
                   isInvalid={errors.message ? touched.message : (isSubmitting && errors.message)}
                 />
-                <Form.Control.Feedback tooltip type="invalid">{errors.message}</Form.Control.Feedback>
+                <Form.Control.Feedback data-testid="messageError" tooltip type="invalid">{errors.message}</Form.Control.Feedback>
                 <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
               </InputGroup>
             </Form.Group>
@@ -96,7 +98,6 @@ export default function SurveyForm({handleSubmit}) {
                         onChange={handleChange}
                       />
                     </div>
-                    {/* {console.log(values)} */}
                   </InputGroup>
                 </Form.Group>
 
@@ -158,4 +159,8 @@ export default function SurveyForm({handleSubmit}) {
         )}
     </Formik>
   );
+}
+
+SurveyForm.proptypes = {
+  handleSubmit: PropTypes.func
 }

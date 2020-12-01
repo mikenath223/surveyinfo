@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should match snapshot 1`] = `
+.c0.source {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: green;
+}
+
+.c0.link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <button
+    class="c0 btn btn-primary"
+    type="button"
+  >
+    Testing
+  </button>
+</div>
+`;

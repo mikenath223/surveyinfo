@@ -10,17 +10,12 @@ import {
   InnerSection,
   BoardAside,
   FormSection,
-  BackDrop
 } from './Quiz.styled';
 import { setThemeMode, saveQuizResult } from 'store/actions';
 import Form from 'components/Form';
 
 const Quiz = ({ theme, setThemeMode, saveQuizResult }) => {
   const history = useHistory();
-
-  React.useEffect(() => {
-    console.log('THEME', theme)
-  }, [])
 
   const handleSubmit = values => {
     const { message, date, layout, color, text } = values;
