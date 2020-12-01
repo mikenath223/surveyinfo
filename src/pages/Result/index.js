@@ -19,7 +19,7 @@ const Result = ({ quizResult: { message, date } }) => {
 
   useEffect(() => {
     if (!message || !date) history.push('/')
-  }, [message, date])
+  }, [message, date, history])
 
   return <Wrapper>
     <Hero>
